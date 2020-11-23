@@ -1,6 +1,6 @@
 ---
-title: "Data Wrangling Project"
-date: 2018-01-28
+title: "Example Project"
+date: 2019-08-12
 tags: [data wrangling, data science, messy data]
 header:
   image: "/images/perceptron/percept.jpg"
