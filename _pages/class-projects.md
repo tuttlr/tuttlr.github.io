@@ -1,7 +1,7 @@
 ---
 layout: tag
 permalink: /tags/class-projects/
-title: "My Projects"
+title: "Class Projects"
 author_profile: true
 taxonomy: Class Projects
 header:
