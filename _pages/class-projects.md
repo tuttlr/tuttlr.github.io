@@ -1,6 +1,6 @@
 ---
 layout: tags
-permalink: /tags/class-projects/
+permalink: /tags/
 title: "Class Projects"
 author_profile: true
 header:
