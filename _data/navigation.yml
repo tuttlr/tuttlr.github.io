@@ -5,7 +5,7 @@ main:
   - title: "My Projects"
     url: /projects/
   - title: "Class Projects"
-    url: /tags/class-projects/
+    url: /tags/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
