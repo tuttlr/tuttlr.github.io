@@ -7,16 +7,16 @@ header:
 excerpt: "Class project for Object Oriented Programming (CSSE220)"
 mathjax: "true"
 ---
-#Object Oriented Programming Team Project
+# Object Oriented Programming Team Project
 ======
-##This project was assigned as part of the Object Oriented Programming class at Rose-Hulman Institute of Technology
+## This project was assigned as part of the Object Oriented Programming class at Rose-Hulman Institute of Technology
 
-###**Milestone 0**
+### **Milestone 0**
 
 The first step in this project was creating a UML diagram using [PlantUML](https://plantuml.com/).
 <img src="{{ site.url }}{{ site.baseurl }}/images/UML.png" alt="UML diagram">
 
-###**Milestone 1: Levels and Hero Movement**
+### **Milestone 1: Levels and Hero Movement**
 Requirements for Milestone 1:
 1.	The initial game level (Level 1) must load from a file
 2.	Left and right movement by the hero controlled by the user using the left and right arrow keys
