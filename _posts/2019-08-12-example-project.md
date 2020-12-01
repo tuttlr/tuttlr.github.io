@@ -1,7 +1,7 @@
 ---
 title: "Example Project"
 date: 2019-08-12
-tags: [data wrangling, data science, messy data]
+tags: [practice]
 header:
   image: "/images/perceptron/percept.jpg"
 excerpt: "Data Wrangling, Data Science, Messy Data"
