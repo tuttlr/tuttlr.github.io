@@ -26,3 +26,8 @@ Requirements for Milestone 1:
   * No diagonal movement by hero is required for this milestone, this movement combines left/right movement simultaneously with up movement
 4.	Two different levels (Level 1 and Level 2) can be loaded from their respective files
 5.	Switching between levels by pressing the "U" (up) and "D" (down) keys on the keyboard
+```java
+  public static void main(String[] args){
+    //my code here
+  }
+```
