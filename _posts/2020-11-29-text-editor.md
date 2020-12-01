@@ -3,7 +3,7 @@ title: "Building a Text Editor with C"
 date: 2020-11-29
 tags: [Personal Projects, C]
 header:
-  image: "/images/keyboard.png"
+  overlay_image: "/images/keyboard.png"
 excerpt: "Personal Project to make a text editor in the C programming language."
 mathjax: "true"
 ---
