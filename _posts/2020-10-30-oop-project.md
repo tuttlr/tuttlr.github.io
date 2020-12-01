@@ -1,7 +1,7 @@
 ---
 title: "Objected Oriented Programming Final Project"
 date: 2020-10-30
-tags: [Class Projects]
+tags: [Class Projects,Java]
 header:
   image: "/images/JetPac.png"
 excerpt: "Class project for Object Oriented Programming (CSSE220)"
