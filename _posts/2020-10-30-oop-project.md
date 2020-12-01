@@ -7,7 +7,6 @@ header:
 excerpt: "Class project for Object Oriented Programming (CSSE220)"
 mathjax: "true"
 ---
-# Object Oriented Programming Team Project
 
 ### This project was assigned as part of the Object Oriented Programming class at Rose-Hulman Institute of Technology
 
