@@ -3,7 +3,7 @@ title: "Building a Text Editor with C"
 date: 2020-11-29
 tags: [Personal Projects, C]
 header:
-  image: "/images/JetPac.png"
+  image: "/images/keyboard.png"
 excerpt: "Personal Project to make a text editor in the C programming language."
 mathjax: "true"
 ---
@@ -11,6 +11,7 @@ mathjax: "true"
 ### This project was inspired by the Introduction to Computer Systems (CSSE132) class at Rose-Hulman Institute of Technology. Introduction to Computer Systems taught the basics of how to use Raspian on a Raspberry Pi, programming in C, and assembly code.
 
 #### *Side note: I used CLion configured to Cygwin for this project.*
+
 
 The first step for this project was exploring the relationship between keypresses and the bytes that we read. The program to output this information is shown below:
 
@@ -79,5 +80,6 @@ int main() {
 
 ```
 #### When the code is run, it is obvious that the timer is too short and the program should be changed to increase efficiency.
+
 
 The next step for this project is adding more input/output handling and using it to draw the screen and allow the user to move the cursor around.
