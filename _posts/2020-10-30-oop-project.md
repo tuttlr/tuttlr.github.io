@@ -3,7 +3,7 @@ title: "Objected Oriented Programming Final Project"
 date: 2020-10-30
 tags: [Class Projects]
 header:
-  image: "/images/perceptron/percept.jpg"
+  image: "/images/JetPac.png"
 excerpt: "Class project for Object Oriented Programming (CSSE220)"
 mathjax: "true"
 ---
