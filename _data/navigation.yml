@@ -4,8 +4,8 @@ main:
     url: /about/
   - title: "My Projects"
     url: /projects/
-  - title: "Class Projects"
-    url: /tags/
+  # - title: "Class Projects"
+  #   url: /tags/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
