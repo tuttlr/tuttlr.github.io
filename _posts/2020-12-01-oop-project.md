@@ -1,7 +1,7 @@
 ---
-title: "Objected Oriented Programming Final Project"
-date: 2020-10-30
-tags: [Class Projects,Java]
+title: "Objected Oriented Programming Final Project (in progress)"
+date: 2020-12-01
+tags: [Class Projects, Java]
 header:
   overlay_image: "/images/JetPac.png"
 excerpt: "Class project for Object Oriented Programming (CSSE220)"
@@ -25,8 +25,3 @@ Requirements for Milestone 1:
   * No diagonal movement by hero is required for this milestone, this movement combines left/right movement simultaneously with up movement
 4.	Two different levels (Level 1 and Level 2) can be loaded from their respective files
 5.	Switching between levels by pressing the "U" (up) and "D" (down) keys on the keyboard
-```java
-  public static void main(String[] args){
-    //my code here
-  }
-```

@@ -1,5 +1,5 @@
 ---
-title: "Building a Text Editor with C"
+title: "Building a Text Editor with C (in progress)"
 date: 2020-11-29
 tags: [Personal Projects, C]
 header:
