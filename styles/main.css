@@ -53,7 +53,7 @@ body {
 }
 
 .jumbotron {
-    background-image: url('D:/Rose/CSSE 280/tuttlr.github.io/images/bluebanner.png'); /* Add the rose background image */
+    background-image: url("../images/bluebanner.png"); /* Add the rose background image */
     background-size: cover;
     /* background-blend-mode: lighten; */
     padding: var(--section-padding) 1rem;
@@ -433,8 +433,9 @@ footer p {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s;
+    background-color: var(--rose-color-light);
   }
   
   .about-image:hover img {
