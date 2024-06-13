@@ -37,7 +37,7 @@ body {
     box-sizing: border-box;
 }
 
-.navbar {
+/* .navbar {
     background-color: #E0E9EB;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: var(--section-padding);
@@ -46,15 +46,111 @@ body {
 .navbar-brand {
     font-weight: bold;
     color: var(--third-color); /* Dark rose */
-}
+/*}
 
-.nav-link {
+/* .nav-link {
     color: var(--third-color); /* Dark rose */
+/*} */ 
+/* Sidebar Navigation */
+/* Sidebar Navigation */
+.sidebar-nav {
+  position: fixed; /* Fix the sidebar to the viewport */
+  top: 50%; /* Center it vertically */
+  left: 0; /* Align to the left */
+  transform: translateY(-50%); /* Adjust to center the sidebar */
+  width: 60px; /* Set a fixed width */
+  background: linear-gradient(145deg, #0062ff, #00c6ff); /* Gradient background */
+  color: white; /* White text */
+  padding: 1rem 0; /* Padding for spacing */
+  border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  z-index: 1000; /* Ensure it stays on top */
+  display: flex; /* Use flex to center the nav items */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
+.sidebar-nav ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Use flex to center items */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.sidebar-nav ul li {
+  margin: 1rem 0; /* Space between links */
+  width: 100%; /* Full width */
+  text-align: center; /* Center the links */
+}
+
+.sidebar-nav ul li a {
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.5rem; /* Larger font size for icons */
+  display: block; /* Make the link fill the width */
+  padding: 0.5rem; /* Padding for clickable area */
+  transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+  border-radius: 50%; /* Circular hover effect */
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a.active {
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent white background on hover */
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.sidebar-nav ul li a:hover::after,
+.sidebar-nav ul li a.active::after {
+  content: attr(title); /* Display title attribute */
+  position: absolute; /* Position relative to the link */
+  left: 70px; /* Position to the right of the sidebar */
+  padding: 5px 10px; /* Padding for the tooltip */
+  background-color: #0062ff; /* Match gradient color */
+  color: white; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  white-space: nowrap; /* Prevent text wrap */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease; /* Fade in tooltip */
+}
+
+.sidebar-nav ul li a:hover::after,
+.sidebar-nav ul li a.active::after {
+  opacity: 1; /* Show tooltip on hover */
+}
+
+/* Ensure main content starts from right of the sidebar */
+.content {
+  margin-left: 80px; /* Offset content to avoid overlap */
+  padding: 2rem; /* Add padding for spacing */
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+  .sidebar-nav {
+      width: 50px; /* Reduce width for smaller screens */
+  }
+
+  .sidebar-nav ul li a {
+      font-size: 1.25rem; /* Reduce font size */
+  }
+
+  .content {
+      margin-left: 60px; /* Adjust content margin */
+      padding: 1rem; /* Reduce padding */
+  }
+}
+
+
+.header{
+  height: 800px;
+}
 .jumbotron {
-    background-image: url("../images/bluebanner.png"); /* Add the rose background image */
+    background-image: url("../images/blueflower.jpg"); /* Add the rose background image */
     background-size: cover;
+    /* background-repeat: no-repeat; */
     /* background-blend-mode: lighten; */
     padding: var(--section-padding) 1rem;
     margin-bottom: var(--section-padding);
@@ -78,7 +174,7 @@ section {
     padding: var(--section-padding);
     margin-bottom: var(--section-padding);
     /* background: linear-gradient(to bottom, #fff, #f7f3f9); */
-    background: linear-gradient(to bottom, #fff, #f7f3f9);
+    transition: background-color 0.3s ease; /* Smooth background color transition */
     text-align: center;
     position: relative;
 }
@@ -88,16 +184,18 @@ section {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: var(--mb-2);
+    color: white;
   }
   
   .qualification__button {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     cursor: pointer;
+    color: white;
   }
   
   .qualification__button:hover {
-    color: var(--rose-color);
+    color: #00c6ff;
   }
   
   .qualification__icon {
@@ -114,24 +212,26 @@ section {
   .qualification__title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
+    color: white;
   }
   
   .qualification__subtitle {
     display: inline-block;
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-1);
+    color: white;
   }
   
   .qualification__calendar {
     font-size: var(--smaller-font-size);
-    color: var(--text-color-light);
+    color: light gray;
   }
   
   .qualification__rounder {
     display: inline-block;
     width: 13px;
     height: 13px;
-    background-color: var(--rose-color);
+    background-color:#00c6ff;
     border-radius: 50%;
   }
   
@@ -139,7 +239,7 @@ section {
     display: block;
     width: 1px;
     height: 100%;
-    background-color: var(--rose-color);
+    background-color: #00c6ff;
     transform: translate(6px, -7px);
   }
   
@@ -152,8 +252,14 @@ section {
   }
   
   .qualification__button.qualification__active {
-    color: var(--rose-color);
+    color:#00c6ff;
   }
+
+  #experience .section__subtitle{
+    color: white;
+  }
+
+
 
 
 footer {
@@ -166,7 +272,7 @@ footer p {
     margin: 0;
 }
 
-/* Project Cards */
+/* Project Cards
 .project {
     position: relative;
     margin-bottom: 3rem;
@@ -259,7 +365,118 @@ footer p {
     margin: 0.25rem;
     border-radius: 5px;
     font-size: 0.9rem;
-  }
+  } */
+  /* Project Section Styles */
+/* Project Section Styles */
+/* General Project Section Styles */
+/* Specific styles for the projects section container */
+#projects .container {
+  width: 80%; /* Allow the container to use the full width of its parent */
+  max-width: 3000px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Add some padding for spacing */
+  display: flex;
+  flex-direction: column; /* Stack projects vertically */
+  align-items: center; /* Center the project cards */
+  gap: 2rem; /* Spacing between project cards */
+}
+
+.project {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  width: 100%; /* Use full width of the project container */
+  background-color: #f8f9fa; /* Light background for cards */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #e0e0e0; /* Light grey border */
+  overflow: hidden; /* Hide overflow to maintain card shape */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect for lifting */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  text-align: left; /* Align text to the left */
+  position: relative; /* Needed for the github link positioning */
+}
+
+.project:hover {
+  transform: translateY(-10px); /* Lift on hover for interaction */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.project-image {
+  flex: 1 1 25%; /* Image takes 50% of the card width */
+  overflow: hidden; /* Hide overflow to keep image in bounds */
+  transition: transform 0.3s ease; /* Smooth zoom-in effect */
+}
+
+.project-image img {
+  width: 100%; /* Make images responsive within their container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Cover the container without distortion */
+  transition: transform 0.3s ease; /* Smooth zoom-in effect */
+}
+
+.project:hover .project-image img {
+  transform: scale(1.1); /* Slight zoom-in on hover */
+}
+
+.project-content {
+  flex: 1 1 50%; /* Content takes 50% of the card width */
+  padding: 1.5rem; /* Inner padding for content */
+  display: flex; /* Use flex to align text vertically */
+  flex-direction: column; /* Stack text elements vertically */
+  justify-content: center; /* Center content vertically */
+}
+
+.project-title {
+  font-size: 1.75rem; /* Slightly larger font for titles */
+  margin-bottom: 0.5rem; /* Margin for spacing */
+}
+
+.project-description {
+  font-size: 1.2rem; /* Slightly larger font for description */
+  margin-bottom: 1rem; /* Margin for spacing */
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap; /* Allow skills to wrap if needed */
+  gap: 0.5rem; /* Space between skill badges */
+}
+
+.project-skills span {
+  background-color: #007bff; /* Primary color for skill badges */
+  color: white;
+  padding: 0.4rem 0.8rem; /* Slightly larger padding for badges */
+  border-radius: 4px; /* Rounded badges */
+  font-size: 1rem; /* Increase font size for badges */
+}
+
+.github-link {
+  position: absolute; /* Position relative to project card */
+  top: 1rem; /* Top spacing */
+  right: 1rem; /* Right spacing */
+}
+
+.github-icon {
+  width: 24px; /* Icon width */
+  height: 24px; /* Icon height */
+  cursor: pointer; /* Pointer cursor for interaction */
+}
+
+/* Ensure AOS transitions are applied to project cards */
+.project[data-aos] {
+  opacity: 0; /* Hide initially for fade effect */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project.aos-animate {
+  opacity: 1; /* Show when animated */
+  transform: translateY(0); /* Reset transform */
+}
+
+
+
+
+/*here*/
   
   .btn-primary {
     background-color: var(--rose-color) !important;
@@ -296,115 +513,107 @@ footer p {
     color: #4a5568;
 }
 
-/* Skill Bars */
-.skill-bar {
-    width: 100%;
-    background-color: #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
+/* Skills Section Styles */
+.custom-skills .skills-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1.5rem; /* Space between grid items */
+  margin-top: 2rem; /* Space above the grid */
 }
 
-.skill-bar-fill {
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    background-color: var(--first-color);
-    text-align: right;
-    padding-right: 10px;
-    box-sizing: border-box;
-    color: white;
-    border-radius: 5px;
-    transition: width 1s ease-in-out;
+.custom-skills .skills-category {
+  padding: 1.5rem; /* Padding around each category */
+  background: linear-gradient(to bottom, #f1f5ff, #e0e7ff); /* Vertical gradient background */
+  border-radius: 12px; /* Rounded corners for category containers */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center text within the category */
 }
 
-/* Skills Section */
-.card-header {
-    background-color: var(--first-color);
-    color: white;
-    border: none;
-    margin-bottom: var(--mb-1);
+.custom-skills .skills-category h3 {
+  margin-bottom: 1rem; /* Space below category title */
+  color: #003366; /* Rich blue color for category titles */
+  font-size: 1.75rem; /* Font size for category titles */
+  font-weight: bold; /* Bold text for emphasis */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  padding: 0.5rem 0; /* Padding above and below the title */
+  /* border-bottom: 2px solid #cce5ff; Light blue border to separate the title */
 }
 
-.card-header .btn-link {
-    color: white;
-    text-decoration: none;
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    background-color: var(--first-color);
-    border-radius: var(--border-radius);
-    padding: 10px;
-    display: block;
-    width: 100%;
-    text-align: left;
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* Other styles remain the same */
+.custom-skills .skills-list {
+  display: flex;
+  flex-direction: column; /* Stack skill items vertically */
+  gap: 0.75rem; /* Space between each skill item */
 }
 
-.card-header .btn-link:hover {
-    text-decoration: none;
-    color: white;
-    background-color: var(--third-color); /* Dark rose */
+.custom-skills .skill-item {
+  display: flex;
+  flex-direction: column; /* Stack text and progress bar vertically */
+  align-items: flex-start; /* Align items to the start */
 }
 
-.card {
-    border: none;
-    background: none;
+.custom-skills .skill-item h4 {
+  margin: 0 0 0.5rem 0; /* Space below skill name */
+  font-size: 1rem; /* Adjust font size for skill names */
+  color: #333333; /* Dark color for skill names */
 }
 
-.card-body {
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: var(--section-padding);
-    margin-bottom: var(--mb-1);
+.custom-skills .skill-level {
+  background-color: #d1ecf1; /* Soft cyan background for skill level */
+  color: #0c5460; /* Dark cyan text color for skill level */
+  font-size: 0.75rem; /* Smaller font size for skill level */
+  padding: 0.2rem 0.5rem; /* Padding for skill level badge */
+  border-radius: 8px; /* Rounded corners for badge */
+  margin-left: 0.5rem; /* Space between text and skill level */
 }
 
-/* Skills Section */
-.skills-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    text-align: left;
+.custom-skills .progress-bar {
+  background-color: #cce5ff; /* Light blue background for progress bar */
+  border-radius: 5px; /* Rounded corners for progress bar */
+  overflow: hidden; /* Keep the progress within the bar */
+  height: 12px; /* Adjusted height of the progress bar */
+  width: 100%; /* Full width of the container */
+  position: relative; /* Needed for animation */
+}
+
+.custom-skills .progress {
+  background: linear-gradient(to right, #0066cc, #003366); /* Dark blue gradient for the filled part of the bar */
+  height: 100%; /* Fill the height of the progress bar */
+  border-radius: 5px; /* Rounded corners for the filled part */
+  animation: fillProgress 2s ease forwards; /* Animation for filling the progress bar */
+}
+
+/* Animation for progress bars */
+@keyframes fillProgress {
+  from {
+      width: 0%;
   }
-  
-  .skills-category {
-    background: #fff;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+  to {
+      width: var(--progress-width); /* Use CSS variable for final width */
   }
-  
-  .skills-category:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Skills Section */
+@media screen and (max-width: 768px) {
+  .custom-skills .skills-grid {
+      grid-template-columns: 1fr; /* Single column grid on small screens */
   }
-  
-  .skills-category h3 {
-    font-size: 1.5rem;
-    color: var(--rose-color);
-    margin-bottom: 1rem;
+
+  .custom-skills .skills-category {
+      padding: 1rem; /* Adjust padding for smaller screens */
   }
-  
-  .skill-item {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
+
+  .custom-skills .skill-item {
+      margin-bottom: 1rem; /* Space below each skill item */
   }
-  
-  .skill-item h4 {
-    margin: 0;
-  }
-  
-  .skill-item span {
-    background-color: var(--rose-color-light);
-    color: var(--rose-color-dark);
-    padding: 0.3rem 0.6rem;
-    border-radius: var(--border-radius);
-    font-size: 0.9rem;
-  }
+}
+
+
+
+
+
+
+
 /* Animation */
 [data-aos="fade-up"] {
     opacity: 0;
@@ -421,6 +630,32 @@ footer p {
   }
 
   /* About Me Section */
+  /* Specific Styles for Each Section */
+#about {
+  background-color: white; /* Dark blue background */
+}
+
+#skills {
+  background-color: white; /* Light blue background */
+}
+
+#experience {
+  background-color: #001f3f; /* Dark blue background */
+  color: white;
+}
+
+#projects {
+  background-color: #e0f7fa; /* Light blue background */
+}
+
+#resume {
+  background-color: #001f3f; /* Dark blue background */
+  color: white;
+}
+
+#contact {
+  background-color: #e0f7fa; /* Light blue background */
+}
 .about-content {
     display: flex;
     flex-direction: column;
@@ -598,6 +833,9 @@ footer p {
     .footer__copy {
       margin-top: 4.5rem;
     }
+    .project {
+      width: 80%; /* Increase width of the card for medium screens */
+  }
   }
   
   /* For large devices */
@@ -637,4 +875,13 @@ footer p {
     .contact__inputs {
       grid-template-columns: repeat(2, 1fr);
     }
+    /* Project Section for Large Devices */
+    .project {
+      width: 100%; /* Increase width of the card for large screens */
+      max-width: 3000px; /* Max width for large screens */
+  }
+
+  .project-content {
+      padding: 2rem; /* Increase padding for large screens */
+  }
   }

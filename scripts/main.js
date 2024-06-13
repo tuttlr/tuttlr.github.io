@@ -1,12 +1,12 @@
 // Smooth scrolling for navigation links
-document.querySelectorAll('a.nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// document.querySelectorAll('a.nav-link').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         document.querySelector(this.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth'
+//         });
+//     });
+// });
 
 // Skill bar animation
 function animateSkillBars() {
@@ -57,4 +57,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+// Highlight active section in the sidebar based on scroll position
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".sidebar-nav ul li a");
+
+    function setActiveLink() {
+        let index = sections.length;
+
+        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove("active"));
+        navLinks[index].classList.add("active");
+    }
+
+    setActiveLink();
+    window.addEventListener("scroll", setActiveLink);
+});
+
+AOS.init({
+    duration: 800, // Duration of animation in milliseconds
+    once: true,    // Whether animation should happen only once
+});
+
+
 
