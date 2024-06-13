@@ -1,14 +1,21 @@
 /* Root variables */
 :root {
     /* --first-color: #e1a6b6; Rose */
-    --first-color: #144E73;
+    /* --first-color: #144E73;
     --second-color: #55C1D9; /* Light rose */
     /* --second-color: #f7d7e2; Light rose */
     /*--third-color: #b33951; /* Dark rose */
-    --third-color: #023E73;
+    /* --third-color: #023E73; */
     /* --text-color: #333; */
-    --text-color: #122A40;
-    --text-color-light: #757575;
+    /* --text-color: #122A40;
+    --text-color-light: #757575; */ 
+    --primary-color: #034C8C; /* Dark blue */
+    --secondary-color: #3892A6; /* Medium blue */
+    --accent-color: #BF3F61; /* Rose */
+    --dark-blue-color: #024873; /* Darker blue */
+    --light-blue-color: #96DBE7; /* Light cyan */
+    --text-color: #000000; /* Black for text */
+    --text-color-light: #ffffff; /* White for text */
     --h3-font-size: 1.5rem;
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
@@ -20,11 +27,13 @@
     --border-radius: 15px;
     --section-padding: 2rem;
     /* --rose-color: #e91e63; */
-    --rose-color: #0367A6;
+    /* --rose-color: #0367A6;
     /* --rose-color-light: #f8bbd0; */
-    --rose-color-light: #B6ECF2;
+    /* --rose-color-light: #B6ECF2; */
     /* --rose-color-dark: #c2185b; */
-    --rose-color-dark: #023E73;
+    /* --rose-color-dark: #023E73; */ 
+    --background-light: #ffffff; /* White */
+    --background-dark: #000000; /* Black */
 }
 
 body {
@@ -59,8 +68,8 @@ body {
   left: 0; /* Align to the left */
   transform: translateY(-50%); /* Adjust to center the sidebar */
   width: 60px; /* Set a fixed width */
-  background: linear-gradient(145deg, #0062ff, #00c6ff); /* Gradient background */
-  color: white; /* White text */
+  background: linear-gradient(145deg, var(--secondary-color), var(--primary-color)); /* Gradient background */
+  color: var(--text-color-light); /* White text */
   padding: 1rem 0; /* Padding for spacing */
   border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -86,7 +95,7 @@ body {
 }
 
 .sidebar-nav ul li a {
-  color: white; /* White text */
+  color: var(--text-color-light); /* White text */
   text-decoration: none; /* Remove underline */
   font-size: 1.5rem; /* Larger font size for icons */
   display: block; /* Make the link fill the width */
@@ -107,8 +116,8 @@ body {
   position: absolute; /* Position relative to the link */
   left: 70px; /* Position to the right of the sidebar */
   padding: 5px 10px; /* Padding for the tooltip */
-  background-color: #0062ff; /* Match gradient color */
-  color: white; /* White text */
+  background-color: var(--primary-color); /* Match gradient color */
+  color: var(--text-color-light); /* White text */
   border-radius: 5px; /* Rounded corners */
   white-space: nowrap; /* Prevent text wrap */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -148,31 +157,67 @@ body {
   height: 800px;
 }
 .jumbotron {
-    background-image: url("../images/blueflower.jpg"); /* Add the rose background image */
-    background-size: cover;
-    /* background-repeat: no-repeat; */
-    /* background-blend-mode: lighten; */
-    padding: var(--section-padding) 1rem;
-    margin-bottom: var(--section-padding);
-    color: var(--text-color); /* Ensures text is readable on background */
-    position: relative;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/blueflower.jpg"); /* Add the rose background image */
+  background-size: cover;
+  padding: var(--section-padding) 1rem;
+  margin: auto;
+  color: var(--text-color-light); /* Ensures text is readable on background */
+  position: relative;
+  text-align: center;
+  height: 400px;
 }
 
 .jumbotron::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.7); /* Adjust opacity of the background image */
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); /* Adjust opacity of the background image */
+  z-index: -1;
 }
+.jumbotron h1 {
+  font-size: 4rem; /* Increase size of h1 */
+  text-shadow: 
+      2px 2px 0 var(--background-dark),
+      -2px -2px 0 var(--background-dark),
+      2px -2px 0 var(--background-dark),
+      -2px 2px 0 var(--background-dark),
+      2px 0px 0 var(--background-dark),
+      -2px 0px 0 var(--background-dark),
+      0px 2px 0 var(--background-dark),
+      0px -2px 0 var(--background-dark);
+  margin: 0; /* Remove default margin to align better */
+}
+
+.jumbotron p {
+  font-size: 2rem; /* Increase size of p */
+  text-shadow: 
+      2px 2px 0 var(--background-dark),
+      -2px -2px 0 var(--background-dark),
+      2px -2px 0 var(--background-dark),
+      -2px 2px 0 var(--background-dark),
+      2px 0px 0 var(--background-dark),
+      -2px 0px 0 var(--background-dark),
+      0px 2px 0 var(--background-dark),
+      0px -2px 0 var(--background-dark);
+  margin: 0; /* Remove default margin to align better */
+}
+
+.jumbotron h1 + p {
+  margin-top: 1rem;
+}
+
+
 
 section {
     padding: var(--section-padding);
-    margin-bottom: var(--section-padding);
+    /* margin-bottom: var(--section-padding); */
     /* background: linear-gradient(to bottom, #fff, #f7f3f9); */
     transition: background-color 0.3s ease; /* Smooth background color transition */
     text-align: center;
@@ -184,18 +229,18 @@ section {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: var(--mb-2);
-    color: white;
+    color: var(--text-color-light);
   }
   
   .qualification__button {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     cursor: pointer;
-    color: white;
+    color: var(--text-color-light);
   }
   
   .qualification__button:hover {
-    color: #00c6ff;
+    color: var(--light-blue-color);
   }
   
   .qualification__icon {
@@ -212,14 +257,14 @@ section {
   .qualification__title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-    color: white;
+    color: var(--text-color-light);
   }
   
   .qualification__subtitle {
     display: inline-block;
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-1);
-    color: white;
+    color: var(--text-color-light);
   }
   
   .qualification__calendar {
@@ -231,7 +276,7 @@ section {
     display: inline-block;
     width: 13px;
     height: 13px;
-    background-color:#00c6ff;
+    background-color:var(--light-blue-color);
     border-radius: 50%;
   }
   
@@ -239,7 +284,7 @@ section {
     display: block;
     width: 1px;
     height: 100%;
-    background-color: #00c6ff;
+    background-color: var(--light-blue-color);
     transform: translate(6px, -7px);
   }
   
@@ -252,19 +297,19 @@ section {
   }
   
   .qualification__button.qualification__active {
-    color:#00c6ff;
+    color:var(--light-blue-color);
   }
 
   #experience .section__subtitle{
-    color: white;
+    color: var(--text-color-light);
   }
 
 
 
 
 footer {
-    background-color: var(--first-color);
-    color: var(--text-color);
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     padding: 1rem 0;
 }
 
@@ -443,8 +488,8 @@ footer p {
 }
 
 .project-skills span {
-  background-color: #007bff; /* Primary color for skill badges */
-  color: white;
+  background-color: var(--primary-color); /* Primary color for skill badges */
+  color: var(--text-color-light);
   padding: 0.4rem 0.8rem; /* Slightly larger padding for badges */
   border-radius: 4px; /* Rounded badges */
   font-size: 1rem; /* Increase font size for badges */
@@ -475,17 +520,6 @@ footer p {
 
 
 
-
-/*here*/
-  
-  .btn-primary {
-    background-color: var(--rose-color) !important;
-    border: none !important;
-  }
-  
-  .btn-primary:hover {
-    background-color: var(--rose-color-dark) !important;
-  }
   
   
   /* Animation */
@@ -523,7 +557,7 @@ footer p {
 
 .custom-skills .skills-category {
   padding: 1.5rem; /* Padding around each category */
-  background: linear-gradient(to bottom, #f1f5ff, #e0e7ff); /* Vertical gradient background */
+  background: linear-gradient(to bottom, var(--background-light), var(--light-blue-color)); /* Vertical gradient background */
   border-radius: 12px; /* Rounded corners for category containers */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   text-align: center; /* Center text within the category */
@@ -531,7 +565,7 @@ footer p {
 
 .custom-skills .skills-category h3 {
   margin-bottom: 1rem; /* Space below category title */
-  color: #003366; /* Rich blue color for category titles */
+  color: var(--dark-blue-color); /* Rich blue color for category titles */
   font-size: 1.75rem; /* Font size for category titles */
   font-weight: bold; /* Bold text for emphasis */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
@@ -555,20 +589,20 @@ footer p {
 .custom-skills .skill-item h4 {
   margin: 0 0 0.5rem 0; /* Space below skill name */
   font-size: 1rem; /* Adjust font size for skill names */
-  color: #333333; /* Dark color for skill names */
+  color: var(--text-color); /* Dark color for skill names */
 }
 
 .custom-skills .skill-level {
-  background-color: #d1ecf1; /* Soft cyan background for skill level */
-  color: #0c5460; /* Dark cyan text color for skill level */
+  background-color: var(--primary-color); /* Soft cyan background for skill level */
+  color: var(--text-color-light); /* Dark cyan text color for skill level */
   font-size: 0.75rem; /* Smaller font size for skill level */
   padding: 0.2rem 0.5rem; /* Padding for skill level badge */
-  border-radius: 8px; /* Rounded corners for badge */
+  border-radius: 20px; /* Rounded corners for badge */
   margin-left: 0.5rem; /* Space between text and skill level */
 }
 
 .custom-skills .progress-bar {
-  background-color: #cce5ff; /* Light blue background for progress bar */
+  background-color: var(--background-light); /* Light blue background for progress bar */
   border-radius: 5px; /* Rounded corners for progress bar */
   overflow: hidden; /* Keep the progress within the bar */
   height: 12px; /* Adjusted height of the progress bar */
@@ -577,7 +611,7 @@ footer p {
 }
 
 .custom-skills .progress {
-  background: linear-gradient(to right, #0066cc, #003366); /* Dark blue gradient for the filled part of the bar */
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color)); /* Dark blue gradient for the filled part of the bar */
   height: 100%; /* Fill the height of the progress bar */
   border-radius: 5px; /* Rounded corners for the filled part */
   animation: fillProgress 2s ease forwards; /* Animation for filling the progress bar */
@@ -632,29 +666,33 @@ footer p {
   /* About Me Section */
   /* Specific Styles for Each Section */
 #about {
-  background-color: white; /* Dark blue background */
+  background-color: var(--background-light); /* Dark blue background */
 }
 
 #skills {
-  background-color: white; /* Light blue background */
+  background-color: var(--background-light); /* Light blue background */
 }
 
 #experience {
-  background-color: #001f3f; /* Dark blue background */
-  color: white;
+  background-color: var(--dark-blue-color); /* Dark blue background */
+  color: var(--text-color-light);
 }
 
 #projects {
-  background-color: #e0f7fa; /* Light blue background */
+  background-color: var(--light-blue-color); /* Light blue background */
 }
 
 #resume {
-  background-color: #001f3f; /* Dark blue background */
-  color: white;
+  background-color: var(--accent-color); /* Dark blue background */
+  color: var(--text-color-light);
 }
 
 #contact {
-  background-color: #e0f7fa; /* Light blue background */
+  background-color: var(--secondary-color); /* Light blue background */
+}
+
+#contact-form{
+  width: 60%;
 }
 .about-content {
     display: flex;
@@ -665,12 +703,12 @@ footer p {
   }
   
   .about-image img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: contain;
     transition: transform 0.3s;
-    background-color: var(--rose-color-light);
+    background: linear-gradient(to bottom,#F3D4C9, var(--accent-color));
   }
   
   .about-image:hover img {
@@ -690,13 +728,254 @@ footer p {
   
   .social-icon {
     font-size: 1.5rem;
-    /* color: var(--rose-color); */
+    color: var(--background-dark);
     transition: color 0.3s;
   }
   
   .social-icon:hover {
-    color: var(--rose-color-dark);
+    color: var(--accent-color);
   }
+/* Achievements Section */
+.achievements-section {
+  background-color: #F3D4C9;/* Enhanced gradient */
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+}
+
+.achievements-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem; /* Slightly smaller font size for title */
+  color: var(--text-color); /* White */
+  margin-bottom: 40px;
+  /* font-family: 'Arial Black', sans-serif; Enhanced font family */
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); Subtle shadow */
+}
+
+/* Slick carousel */
+.achievements-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center the carousel content */
+  align-items: center; /* Vertically center the carousel items */
+}
+
+/* Sleek, flat cards */
+.achievement-card {
+  background-color: #ffffff; /* White */
+  border-radius: 15px; /* Moderately rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for subtle depth */
+  width: 220px; /* Smaller, more compact cards */
+  margin: 0 10px; /* Adjusted margin for spacing */
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem; /* Slightly reduced padding */
+  position: relative; /* For pseudo-elements */
+  z-index: 1;
+  border: 1px solid #e0e0e0; /* Subtle light grey border */
+}
+
+.achievement-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow on hover */
+  transform: none; /* No lift effect on hover */
+}
+
+.card-icon {
+  background-color: #3892A6; /* Medium blue */
+  border-radius: 50%;
+  padding: 1rem; /* Moderate icon area */
+  margin-bottom: 1rem; /* Space below icon */
+  display: inline-block;
+}
+
+.card-icon img {
+  width: 50px; /* Moderate icon size */
+  height: 50px;
+}
+
+.card-content {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.achievement-title {
+  font-size: 1.5rem; /* Moderate font size */
+  color: #034C8C; /* Dark blue */
+  margin-bottom: 10px;
+  font-weight: bold; /* Bold text for titles */
+}
+
+.achievement-description {
+  font-size: 1rem; /* Moderate text size */
+  color: #333333; /* Dark grey text */
+}
+
+/* Carousel navigation buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #034C8C; /* Dark blue */
+  color: #ffffff; /* White */
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem; /* Slightly smaller font size */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 10;
+}
+
+/* Enhancing button design with icon and better positioning */
+.carousel-button-left {
+  left: 200px; /* Position closer to the center */
+}
+
+.carousel-button-right {
+  right: 200px; /* Position closer to the center */
+}
+
+/* Hover effect */
+.carousel-button:hover {
+  background-color: #BF3F61; /* Rose */
+  transform: scale(1.1);
+}
+
+/* Adjust button visibility */
+.carousel-button:focus {
+  outline: none;
+}
+
+/* Hide default text in buttons while showing icons */
+.carousel-button::before {
+  content: '';
+}
+
+/* Volunteering Fullwidth Section */
+.volunteering-fullwidth {
+  background: #f5f5f5; /* Neutral background */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.volunteering-fullwidth .container {
+  max-width: 1600px; /* Increased max-width for larger containers */
+  margin: 0 auto;
+  padding: 0 2rem; /* More padding for better spacing */
+}
+
+.volunteering-title {
+  font-size: 3rem; /* Larger title size */
+  color: #333333; /* Dark grey */
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif; /* A different font for a unique touch */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.volunteering-intro {
+  font-size: 1.4rem; /* Larger intro text size */
+  color: #555555; /* Medium grey */
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif; /* Clean, readable font */
+}
+
+.volunteering-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap content on smaller screens */
+  gap: 40px; /* More space between sections */
+  justify-content: center;
+}
+
+.volunteering-section {
+  position: relative;
+  flex: 1 1 45%; /* Each section takes up about half the width */
+  min-height: 500px; /* Increased minimum height for larger images */
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 20px; /* Rounded corners for sections */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.volunteering-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  filter: brightness(0.9); /* Slight darkening to enhance text visibility */
+  transition: transform 0.3s ease;
+}
+
+.volunteering-section:hover .volunteering-background {
+  filter: brightness(1); /* Remove darkening on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.volunteering-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px; /* Increased padding for better text spacing */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  color: #ffffff; /* White text */
+  border-radius: 15px;
+  max-width: 70%; /* Adjusted max width for content */
+  margin: auto; /* Center the content */
+  text-align: left;
+}
+
+.volunteering-experience-title {
+  font-size: 1.8rem; /* Larger font size for titles */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.volunteering-experience-description {
+  font-size: 1.2rem; /* Larger font size for descriptions */
+}
+
+.volunteering-image-credit {
+  margin-top: 10px;
+  font-size: 0.9rem; /* Slightly larger text size for credits */
+  color: #dddddd; /* Light grey text to distinguish from main content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .volunteering-section {
+      flex: 1 1 100%; /* Full width on smaller screens */
+      min-height: 300px; /* Reduced height for smaller screens */
+  }
+
+  .volunteering-content {
+      max-width: 90%; /* More width for content on smaller screens */
+      padding: 20px; /* Reduced padding */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive Design for Medium Devices */
 @media screen and (min-width: 768px) {
